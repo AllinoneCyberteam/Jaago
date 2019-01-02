@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     String coun = "";
     private ArrayList<String> urlNo = new ArrayList<>();
     private WebView webView;
-    private String JSON_URL = "https://newsapi.org/v2/top-headlines?country=in&apiKey=eb524ac737c44081923e4bd0366af2b8";
+    private String JSON_URL = "https://newsapi.org/v2/top-headlines?country=in&apiKey=API_KEY";
     private String JSON_TEMP = "";
     private DrawerLayout mDrawerLayout;
     private Toolbar toolbar;
@@ -167,35 +167,35 @@ SharedPref sharedPref;
                         mDrawerLayout.closeDrawers();
                         switch (menuItem.getItemId()) {
                             case R.id.nav_top:
-                                JSON_URL = "https://newsapi.org/v2/top-headlines?country=in&apiKey=eb524ac737c44081923e4bd0366af2b8";
+                                JSON_URL = "https://newsapi.org/v2/top-headlines?country=in&apiKey=API_KEY";
                                 loadNewsList();
                                 break;
                             case R.id.nav_ent:
-                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=entertainment&apiKey=eb524ac737c44081923e4bd0366af2b8";
+                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=entertainment&apiKey=API_KEY";
                                 loadNewsList();
                                 break;
                             case R.id.nav_gen:
-                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=general&apiKey=eb524ac737c44081923e4bd0366af2b8";
+                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=general&apiKey=API_KEY";
                                 loadNewsList();
                                 break;
                             case R.id.nav_health:
-                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=health&apiKey=eb524ac737c44081923e4bd0366af2b8";
+                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=health&apiKey=API_KEY";
                                 loadNewsList();
                                 break;
                             case R.id.nav_science:
-                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=science&apiKey=eb524ac737c44081923e4bd0366af2b8";
+                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=science&apiKey=API_KEY";
                                 loadNewsList();
                                 break;
                             case R.id.nav_sports:
-                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=sports&apiKey=eb524ac737c44081923e4bd0366af2b8";
+                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=sports&apiKey=API_KEY";
                                 loadNewsList();
                                 break;
                             case R.id.nav_tech:
-                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=technology&apiKey=eb524ac737c44081923e4bd0366af2b8";
+                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=technology&apiKey=API_KEY";
                                 loadNewsList();
                                 break;
                             case R.id.nav_bus:
-                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=business&apiKey=eb524ac737c44081923e4bd0366af2b8";
+                                JSON_URL = "https://newsapi.org/v2/top-headlines?category=business&apiKey=API_KEY";
                                 loadNewsList();
                                 break;
                             case R.id.nav_saved:
@@ -230,7 +230,7 @@ SharedPref sharedPref;
             src = src.replace(" ", "-");
             src = src.replace("(", "-");
             src = src.replace(")", "");
-            JSON_URL = "https://newsapi.org/v2/everything?sources=" + src + "&language=en&apiKey=eb524ac737c44081923e4bd0366af2b8";
+            JSON_URL = "https://newsapi.org/v2/everything?sources=" + src + "&language=en&apiKey=API_KEY";
             loadNewsList();
         }
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -332,7 +332,7 @@ SharedPref sharedPref;
         String myFormat = "yyyy-MM-dd"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         String datee = sdf.format(myCalendar.getTime());
-        JSON_URL = "https://newsapi.org/v2/everything?q=%20from=" + datee + "&to=" + datee + "&apiKey=616d4a522af74092923e0c8ffd547a13";
+        JSON_URL = "https://newsapi.org/v2/everything?q=%20from=" + datee + "&to=" + datee + "&apiKey=API_KEY";
         loadNewsList();
     }
 
@@ -459,7 +459,7 @@ SharedPref sharedPref;
     public void dosearch(View view) {
         EditText editText = findViewById(R.id.searchtxt);
         String s = String.valueOf(editText.getText());
-        JSON_URL = "https://newsapi.org/v2/everything?q=" + s + "&apiKey=eb524ac737c44081923e4bd0366af2b8";
+        JSON_URL = "https://newsapi.org/v2/everything?q=" + s + "&apiKey=API_KEY";
         loadNewsList();
 
     }
@@ -511,13 +511,13 @@ SharedPref sharedPref;
                 String addressLine = addresses.get(0).getAddressLine(0);
                 city = addresses.get(0).getLocality();
                 //Toast.makeText(this,city,Toast.LENGTH_LONG).show();
-                //JSON_TEMP = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=b1776b13cca545979c825013182812&q=" + city + "&date=today&format=json";
+                //JSON_TEMP = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=API_KEY&q=" + city + "&date=today&format=json";
                 //loadTemp();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        JSON_TEMP = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=b1776b13cca545979c825013182812&q=" + lat + "," + lng + "&date=today&format=json";
+        JSON_TEMP = "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=API_KEY&q=" + lat + "," + lng + "&date=today&format=json";
         loadTemp();
         return;
     }
