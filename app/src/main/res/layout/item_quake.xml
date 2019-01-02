@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="8dp"
+    android:padding="8dp">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:id="@+id/magnitude"
+        android:layout_weight="1"
+        android:text="7.2"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/country"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:text="INDIA"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textColor="#000"
+        android:id="@+id/date"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:text="Feb 2,2016"/>
+
+</LinearLayout>

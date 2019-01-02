@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titletextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Title"
+        android:textColor="#000"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="8dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/desctextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Description"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/newsrel"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/attextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            android:text="Published At"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/bytextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:text="Published By"
+            android:textColor="#000" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/share"
+            android:layout_below="@id/bytextview"
+            android:layout_toLeftOf="@id/delete"
+            android:layout_margin="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/share"
+            android:layout_alignParentBottom="true"
+            style="?android:attr/borderlessButtonStyle"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/bytextview"
+            android:src="@drawable/dustbin"
+            android:id="@+id/delete"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitCenter"
+            android:layout_alignParentBottom="true"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="8dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

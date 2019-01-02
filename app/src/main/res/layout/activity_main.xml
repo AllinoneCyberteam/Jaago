@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="?attr/backgroundCardColor"
+        android:id="@+id/main"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/content_frame"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:titleTextColor="#FFF" />
+
+            <Switch
+                android:id="@+id/temptxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/searchicon"
+                android:layout_marginRight="8dp"
+                android:text="Night"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+            <ImageButton
+                android:layout_width="50dp"
+                android:scaleType="fitCenter"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:onClick="opensearch"
+                android:id="@+id/searchicon"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/loupe"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:id="@+id/search"
+                android:background="@color/colorPrimary"
+                android:visibility="gone">
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/back"
+                    android:onClick="opentool"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    style="?android:attr/borderlessButtonStyle"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/searchtxt"
+                    android:textColor="?attr/textcolor"
+                    android:layout_centerVertical="true"
+                    android:hint="Search"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:scaleType="fitCenter"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/dosearch"
+                    android:layout_marginRight="8dp"
+                    android:onClick="dosearch"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/loupe"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_frame">
+
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/temp"
+
+            android:layout_marginBottom="60dp"
+            tools:listitem="@layout/item_news" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/srcflo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="40dp"
+            android:onClick="opensrcs"
+            android:src="@mipmap/plusbutton" />
+
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/calflo"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/calendar" />
+
+            <ImageButton
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="opensaved"
+                android:scaleType="fitCenter"
+                android:src="@drawable/file" />
+
+            <ImageButton
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/star" />
+
+            <ImageButton
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="opensort"
+                android:scaleType="fitCenter"
+                android:src="@drawable/transfer" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="sortrel"
+                android:text="Relevance"
+                android:textColor="?attr/textcolor"/>
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="sortpop"
+                android:text="Polpularity"
+                android:textColor="?attr/textcolor" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="sortnew"
+                android:text="Newest"
+                android:textColor="?attr/textcolor" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_view" />
+</android.support.v4.widget.DrawerLayout>

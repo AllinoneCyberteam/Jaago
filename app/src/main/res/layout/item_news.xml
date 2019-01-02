@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titletextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Title"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="8dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/desctextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Description"
+
+        android:textSize="18dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/newsrel"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/attextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            android:text="Published At"
+            />
+
+        <TextView
+            android:id="@+id/bytextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:text="Published By"
+             />
+
+        <ImageButton
+            android:id="@+id/share"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/bytextview"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@id/save"
+            android:scaleType="fitCenter"
+            android:src="@drawable/share" />
+
+        <ImageButton
+            android:id="@+id/save"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/bytextview"
+            android:layout_margin="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/savew" />
+    </RelativeLayout>
+
+
+</LinearLayout>

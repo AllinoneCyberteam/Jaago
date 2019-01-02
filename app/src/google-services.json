@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "64049674150",
+    "firebase_url": "https://jaago-226911.firebaseio.com",
+    "project_id": "jaago-226911",
+    "storage_bucket": "jaago-226911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64049674150:android:d041a07058c2f683",
+        "android_client_info": {
+          "package_name": "com.jaago.jaago"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64049674150-q6arq7f0l6gbidlbmrogvudpank2cmna.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jaago.jaago",
+            "certificate_hash": "8d927c3e3cae75d1d02d884ca1f9d043d1420956"
+          }
+        },
+        {
+          "client_id": "64049674150-t2hd097r4n830545rd0mgvvle6tmdqs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_XAtrWqUtbeFxmaDcpMx7qz7sp-QwZ_0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64049674150-t2hd097r4n830545rd0mgvvle6tmdqs8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
