@@ -27,10 +27,10 @@
 
         <meta-data
             android:name="com.google.android.geo.api_key"
-            android:value="AIzaSyAeb0-5Pf854RCR0TCMfWn1OSsmUjn80x0" />
+            android:value="API_KEY" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAeb0-5Pf854RCR0TCMfWn1OSsmUjn80x0" />
+            android:value="API_KEY" />
 
         <activity android:name=".ReadersCategory" />
         <activity android:name=".Login"></activity>
