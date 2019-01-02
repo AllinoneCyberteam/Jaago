@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sources extends AppCompatActivity {
-    private  String JSON_URL ="https://newsapi.org/v2/sources?language=en&apiKey=eb524ac737c44081923e4bd0366af2b8";
+    private  String JSON_URL ="https://newsapi.org/v2/sources?language=en&apiKey=API_KEY";
     ListView listView;
     List<Source> source;
     private ArrayList<String> srcName = new ArrayList<>();
