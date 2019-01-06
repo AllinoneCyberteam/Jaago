@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityhealth">
+
+    <!--<android.support.v4.view.ViewPager
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@+id/viewPager">
+
+     </android.support.v4.view.ViewPager>-->
+    <SearchView
+        android:id="@+id/srch"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="8dp" />
+    <HorizontalScrollView
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="51dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/top"
+                android:text="top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/entmnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="entertainment"/>
+            <Button
+                android:id="@+id/gnrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="general"/>
+            <Button
+                android:id="@+id/health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="health"/>
+            <Button
+                android:id="@+id/scne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="science"/>
+            <Button
+                android:id="@+id/sprts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sports"/>
+            <Button
+                android:id="@+id/tech"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="technology"/>
+            <Button
+                android:id="@+id/bsns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="business"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Spinner
+
+        android:id="@+id/spinner"
+        android:layout_width="168dp"
+        android:layout_height="51dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="215dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/pb"
+        android:visibility="invisible"
+        android:layout_alignParentStart="true" />
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="412dp"
+        android:layout_below="@+id/horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></ListView>
+
+    <!--  <WebView
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@+id/webView1"/>-->
+
+</RelativeLayout>
